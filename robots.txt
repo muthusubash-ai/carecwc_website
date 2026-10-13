@@ -1,0 +1,26 @@
+# CARE Family Counselling — Chennai
+# https://carecwc.com
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /uploads/events/*.tmp
+Disallow: /*.sql$
+
+# Block AI training bots (optional — remove if you want AI to learn from your site)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+# Allow Google, Bing, and search engines full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap
+Sitemap: https://carecwc.com/sitemap.xml
