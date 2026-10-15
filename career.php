@@ -281,65 +281,8 @@ include __DIR__ . '/includes/header.php';
       At CARE Family Counselling &amp; Children’s Wellness Center, you’ll work in a warm, non-judgmental, confidentiality-first environment, alongside colleagues who value continuous learning and evidence-based practice. If you’re a passionate psychologist, counsellor, or wellness professional, we’d love to hear from you. Apply for Internships / jobs through the below forms.
     </p>
     <div class="events-hero-cta">
-      <a href="#jobs-form" class="btn btn-primary">Apply for Jobs (Left)</a>
-      <a href="#internship-form" class="btn btn-outline">Apply for Internship (Right)</a>
-    </div>
-  </div>
-</section>
-
-<!-- Why Work With Us Section -->
-<section style="padding: 56px 0 40px;">
-  <div class="container">
-    <div style="text-align: center; max-width: 720px; margin: 0 auto 46px;">
-      <span class="eyebrow">Why CARE?</span>
-      <h2 style="margin-bottom: 14px;">Why Build Your Career With Us?</h2>
-      <p style="color: var(--slate-gray); font-size: 17px;">
-        We believe that caring for our therapists is the foundation of exceptional care for our clients. Here is what makes working at CARE rewarding and supportive:
-      </p>
-    </div>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-      
-      <div style="background: #fff; padding: 32px 26px; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border); transition: transform 0.2s ease;">
-        <div style="width: 52px; height: 52px; border-radius: 12px; background: rgba(33, 62, 101, 0.08); display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 18px;">
-          👥
-        </div>
-        <h3 style="margin-bottom: 10px; color: var(--navy); font-size: 20px;">Peer Supervision &amp; Mentorship</h3>
-        <p style="color: var(--slate-gray); font-size: 15px; margin: 0; line-height: 1.6;">
-          Work alongside seasoned practitioners like Mrs. Siva Priya and Mr. G Damodaran. Benefit from regular case discussions, peer reviews, and ongoing professional development.
-        </p>
-      </div>
-
-      <div style="background: #fff; padding: 32px 26px; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border); transition: transform 0.2s ease;">
-        <div style="width: 52px; height: 52px; border-radius: 12px; background: rgba(244, 180, 0, 0.12); display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 18px;">
-          ⏳
-        </div>
-        <h3 style="margin-bottom: 10px; color: var(--navy); font-size: 20px;">Rush-Free Therapy Model</h3>
-        <p style="color: var(--slate-gray); font-size: 15px; margin: 0; line-height: 1.6;">
-          We strictly follow a non-hurried therapy schedule with adequate buffer times between sessions, ensuring zero burnout and allowing you to offer focused, thoughtful care.
-        </p>
-      </div>
-
-      <div style="background: #fff; padding: 32px 26px; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border); transition: transform 0.2s ease;">
-        <div style="width: 52px; height: 52px; border-radius: 12px; background: rgba(155, 123, 211, 0.14); display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 18px;">
-          🌱
-        </div>
-        <h3 style="margin-bottom: 10px; color: var(--navy); font-size: 20px;">Diverse Case Exposure</h3>
-        <p style="color: var(--slate-gray); font-size: 15px; margin: 0; line-height: 1.6;">
-          Gain in-depth clinical experience spanning couples &amp; marital therapy, ASD/ADHD child assessment, adolescent guidance, de-addiction recovery, and life coaching.
-        </p>
-      </div>
-
-      <div style="background: #fff; padding: 32px 26px; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border); transition: transform 0.2s ease;">
-        <div style="width: 52px; height: 52px; border-radius: 12px; background: rgba(33, 62, 101, 0.08); display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 18px;">
-          ⚖️
-        </div>
-        <h3 style="margin-bottom: 10px; color: var(--navy); font-size: 20px;">Ethical &amp; Flexible Culture</h3>
-        <p style="color: var(--slate-gray); font-size: 15px; margin: 0; line-height: 1.6;">
-          We uphold the highest ethical standards of client privacy and therapist well-being. We offer adaptable full-time and part-time consulting schedules tailored to your lifestyle.
-        </p>
-      </div>
-
+      <a href="#jobs-form" class="btn btn-primary">Apply for Jobs</a>
+      <a href="#internship-form" class="btn btn-outline">Apply for Internship</a>
     </div>
   </div>
 </section>
@@ -370,7 +313,7 @@ include __DIR__ . '/includes/header.php';
 .career-form-card h2 {
   font-size: 24px;
   color: var(--navy);
-  margin: 0 0 8px;
+  margin: 0 0 22px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -472,10 +415,6 @@ include __DIR__ . '/includes/header.php';
       <!-- ================================================================= -->
       <div class="career-form-card" id="jobs-form">
         <h2>💼 Apply Here For Jobs:</h2>
-        <p class="form-subtitle">For qualified psychologists, counsellors, and healthcare professionals.</p>
-        <div class="mandatory-note">
-          Left side of the Page: All fields are mandatory - mention with red <span class="req">*</span>.
-        </div>
 
         <?php if ($jobSuccess): ?>
           <div class="career-alert-success">
@@ -506,20 +445,20 @@ include __DIR__ . '/includes/header.php';
             </div>
 
             <!-- 1. Name -->
-            <label for="job_name">1. Name <span class="req">*</span></label>
+            <label for="job_name">Name <span class="req">*</span></label>
             <input type="text" id="job_name" name="job_name" required pattern="[a-zA-Z\s]+" title="Allow only Alphabets" oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')" value="<?= h($_POST['job_name'] ?? '') ?>" placeholder="Enter your full name">
 
-            <!-- 2. Gender -->
-            <label for="job_gender">2. Gender <span class="req">*</span></label>
+            <!-- Gender -->
+            <label for="job_gender">Gender <span class="req">*</span></label>
             <select id="job_gender" name="job_gender" required>
-              <option value="">— Dropdown - Male / Female / Transgender —</option>
+              <option value="" disabled <?= empty($_POST['job_gender']) ? 'selected' : '' ?> hidden>Select Gender</option>
               <option value="Male" <?= (($_POST['job_gender'] ?? '') === 'Male') ? 'selected' : '' ?>>Male</option>
               <option value="Female" <?= (($_POST['job_gender'] ?? '') === 'Female') ? 'selected' : '' ?>>Female</option>
               <option value="Transgender" <?= (($_POST['job_gender'] ?? '') === 'Transgender') ? 'selected' : '' ?>>Transgender</option>
             </select>
 
             <!-- 3. Age -->
-            <label for="job_age">3. Age <span class="req">*</span></label>
+            <label for="job_age">Age <span class="req">*</span></label>
             <input type="text" id="job_age" name="job_age" required inputmode="numeric" pattern="[0-9]+" maxlength="3" title="Allow only numbers" oninput="this.value=this.value.replace(/[^0-9]/g,'')" value="<?= h($_POST['job_age'] ?? '') ?>" placeholder="e.g. 28">
 
             <!-- Phone Number & Email -->
@@ -535,36 +474,36 @@ include __DIR__ . '/includes/header.php';
             </div>
 
             <!-- 4. Highest Degree -->
-            <label for="job_degree">4. Highest Degree <span class="req">*</span></label>
+            <label for="job_degree">Highest Degree <span class="req">*</span></label>
             <input type="text" id="job_degree" name="job_degree" required value="<?= h($_POST['job_degree'] ?? '') ?>" placeholder="e.g. MSc Clinical Psychology / MPhil">
 
             <!-- 5. Specialization -->
-            <label for="job_specialization">5. Specialization <span class="req">*</span></label>
+            <label for="job_specialization">Specialization <span class="req">*</span></label>
             <input type="text" id="job_specialization" name="job_specialization" required value="<?= h($_POST['job_specialization'] ?? '') ?>" placeholder="e.g. Marriage &amp; Family / Child Therapy">
 
             <!-- 6. Internship Done at -->
-            <label for="job_internship_at">6. Internship Done at <span class="req">*</span></label>
+            <label for="job_internship_at">Internship Done at <span class="req">*</span></label>
             <input type="text" id="job_internship_at" name="job_internship_at" required value="<?= h($_POST['job_internship_at'] ?? '') ?>" placeholder="Name of hospital, clinic, or institute">
 
-            <!-- 7. Relevant years of experience -->
-            <label for="job_experience">7. Relevant years of experience <span class="req">*</span></label>
-            <input type="text" id="job_experience" name="job_experience" required inputmode="numeric" pattern="[0-9]+" title="Allow only numbers" oninput="this.value=this.value.replace(/[^0-9]/g,'')" value="<?= h($_POST['job_experience'] ?? '') ?>" placeholder="e.g. 3 (Allow only numbers)">
+            <!-- Relevant years of experience -->
+            <label for="job_experience">Relevant years of experience <span class="req">*</span></label>
+            <input type="text" id="job_experience" name="job_experience" required inputmode="numeric" pattern="[0-9]+" title="Allow only numbers" oninput="this.value=this.value.replace(/[^0-9]/g,'')" value="<?= h($_POST['job_experience'] ?? '') ?>">
 
             <!-- 8. Your top 5 specialization -->
-            <label for="job_top5">8. Your top 5 specialization: <span class="req">*</span></label>
+            <label for="job_top5">Your top 5 specialization: <span class="req">*</span></label>
             <input type="text" id="job_top5" name="job_top5" required value="<?= h($_POST['job_top5'] ?? '') ?>" placeholder="e.g. CBT, Couples, Anxiety, Depression, ASD">
 
             <!-- 9. Interested Profile Name -->
-            <label for="job_profile">9. Interested Profile Name <span class="req">*</span></label>
+            <label for="job_profile">Interested Profile Name <span class="req">*</span></label>
             <input type="text" id="job_profile" name="job_profile" required value="<?= h($_POST['job_profile'] ?? '') ?>" placeholder="e.g. Consultant Clinical Psychologist">
 
             <!-- 10. Upload Resume (Only PDFs) -->
-            <label for="job_resume">10. Upload Resume (Only PDFs) <span class="req">*</span></label>
+            <label for="job_resume">Upload Resume (Only PDFs) <span class="req">*</span></label>
             <input type="file" id="job_resume" name="job_resume" required accept=".pdf,application/pdf" style="padding: 8px 10px;">
             <small style="display:block; color:#6E7688; margin:-10px 0 16px; font-size:12.5px;">Note: PDF files only, max 10MB.</small>
 
             <!-- 11. Your message -->
-            <label for="job_message">11. Your message <span class="req">*</span></label>
+            <label for="job_message">Your message <span class="req">*</span></label>
             <textarea id="job_message" name="job_message" required rows="3" placeholder="Tell us about yourself and your career goals..."><?= h($_POST['job_message'] ?? '') ?></textarea>
 
             <!-- 12. Submit Button -->
@@ -580,10 +519,6 @@ include __DIR__ . '/includes/header.php';
       <!-- ================================================================= -->
       <div class="career-form-card" id="internship-form">
         <h2>🎓 Apply Here For Internship:</h2>
-        <p class="form-subtitle">For psychology students, graduates, and aspiring therapists.</p>
-        <div class="mandatory-note">
-          Right side of the Page: All fields are mandatory - mention with red <span class="req">*</span>.
-        </div>
 
         <?php if ($internshipSuccess): ?>
           <div class="career-alert-success">
@@ -613,14 +548,14 @@ include __DIR__ . '/includes/header.php';
               <input type="text" id="in_website" name="website" tabindex="-1" autocomplete="off">
             </div>
 
-            <!-- 1. Name -->
-            <label for="intern_name">1. Name <span class="req">*</span></label>
+            <!-- Name -->
+            <label for="intern_name">Name <span class="req">*</span></label>
             <input type="text" id="intern_name" name="intern_name" required pattern="[a-zA-Z\s]+" title="Allow only Alphabets" oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')" value="<?= h($_POST['intern_name'] ?? '') ?>" placeholder="Enter your full name">
 
-            <!-- 2. Gender -->
-            <label for="intern_gender">2. Gender <span class="req">*</span></label>
+            <!-- Gender -->
+            <label for="intern_gender">Gender <span class="req">*</span></label>
             <select id="intern_gender" name="intern_gender" required>
-              <option value="">— Dropdown - Male / Female / Transgender —</option>
+              <option value="" disabled <?= empty($_POST['intern_gender']) ? 'selected' : '' ?> hidden>Select Gender</option>
               <option value="Male" <?= (($_POST['intern_gender'] ?? '') === 'Male') ? 'selected' : '' ?>>Male</option>
               <option value="Female" <?= (($_POST['intern_gender'] ?? '') === 'Female') ? 'selected' : '' ?>>Female</option>
               <option value="Transgender" <?= (($_POST['intern_gender'] ?? '') === 'Transgender') ? 'selected' : '' ?>>Transgender</option>
@@ -638,35 +573,35 @@ include __DIR__ . '/includes/header.php';
               </div>
             </div>
 
-            <!-- 3. Degree -->
-            <label for="intern_degree">3. Degree <span class="req">*</span></label>
+            <!-- Degree -->
+            <label for="intern_degree">Degree <span class="req">*</span></label>
             <input type="text" id="intern_degree" name="intern_degree" required value="<?= h($_POST['intern_degree'] ?? '') ?>" placeholder="e.g. BSc / MSc / MA Psychology">
 
-            <!-- 4. Specialization -->
-            <label for="intern_specialization">4. Specialization <span class="req">*</span></label>
+            <!-- Specialization -->
+            <label for="intern_specialization">Specialization <span class="req">*</span></label>
             <input type="text" id="intern_specialization" name="intern_specialization" required value="<?= h($_POST['intern_specialization'] ?? '') ?>" placeholder="e.g. Clinical / Counselling / Applied Psychology">
 
-            <!-- 5. College / University Name -->
-            <label for="intern_college">5. College / University Name <span class="req">*</span></label>
-            <input type="text" id="intern_college" name="intern_college" required value="<?= h($_POST['intern_college'] ?? '') ?>" placeholder="e.g. University of Madras / Stella Maris">
+            <!-- College / University Name -->
+            <label for="intern_college">College / University Name <span class="req">*</span></label>
+            <input type="text" id="intern_college" name="intern_college" required value="<?= h($_POST['intern_college'] ?? '') ?>">
 
-            <!-- 6. Internship Duration (in Days) Required -->
-            <label for="intern_duration">6. Internship Duration (in Days) Required <span class="req">*</span></label>
-            <input type="text" id="intern_duration" name="intern_duration" required inputmode="numeric" pattern="[0-9]+" title="Allow only numbers" oninput="this.value=this.value.replace(/[^0-9]/g,'')" value="<?= h($_POST['intern_duration'] ?? '') ?>" placeholder="e.g. 30 (Allow only numbers)">
+            <!-- Internship Duration (in Days) Required -->
+            <label for="intern_duration">Internship Duration (in Days) Required <span class="req">*</span></label>
+            <input type="text" id="intern_duration" name="intern_duration" required inputmode="numeric" pattern="[0-9]+" title="Allow only numbers" oninput="this.value=this.value.replace(/[^0-9]/g,'')" value="<?= h($_POST['intern_duration'] ?? '') ?>">
 
-            <!-- 7. No Of Cases Required To Submit -->
-            <label for="intern_cases">7. No Of Cases Required To Submit <span class="req">*</span></label>
-            <input type="text" id="intern_cases" name="intern_cases" required inputmode="numeric" pattern="[0-9]+" title="Allow only numbers" oninput="this.value=this.value.replace(/[^0-9]/g,'')" value="<?= h($_POST['intern_cases'] ?? '') ?>" placeholder="e.g. 5 (Allow only numbers)">
+            <!-- No Of Cases Required To Submit -->
+            <label for="intern_cases">No Of Cases Required To Submit <span class="req">*</span></label>
+            <input type="text" id="intern_cases" name="intern_cases" required inputmode="numeric" pattern="[0-9]+" title="Allow only numbers" oninput="this.value=this.value.replace(/[^0-9]/g,'')" value="<?= h($_POST['intern_cases'] ?? '') ?>">
 
-            <!-- 8. No Of Students Willing To Enroll -->
-            <label for="intern_students">8. No Of Students Willing To Enroll <span class="req">*</span></label>
-            <input type="text" id="intern_students" name="intern_students" required inputmode="numeric" pattern="[0-9]+" title="Allow only numbers" oninput="this.value=this.value.replace(/[^0-9]/g,'')" value="<?= h($_POST['intern_students'] ?? '') ?>" placeholder="e.g. 1 (Allow only numbers)">
+            <!-- No Of Students Willing To Enroll -->
+            <label for="intern_students">No Of Students Willing To Enroll <span class="req">*</span></label>
+            <input type="text" id="intern_students" name="intern_students" required inputmode="numeric" pattern="[0-9]+" title="Allow only numbers" oninput="this.value=this.value.replace(/[^0-9]/g,'')" value="<?= h($_POST['intern_students'] ?? '') ?>">
 
-            <!-- 9. Your message -->
-            <label for="intern_message">9. Your message <span class="req">*</span></label>
+            <!-- Your message -->
+            <label for="intern_message">Your message <span class="req">*</span></label>
             <textarea id="intern_message" name="intern_message" required rows="3" placeholder="Tell us about your learning objectives or dates..."><?= h($_POST['intern_message'] ?? '') ?></textarea>
 
-            <!-- 10. Submit Button -->
+            <!-- Submit Button -->
             <button type="submit" class="btn btn-primary btn-block" style="padding: 13px; font-size: 16px;"> Submit Internship Request</button>
           </form>
 
