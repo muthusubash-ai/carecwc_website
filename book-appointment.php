@@ -66,7 +66,7 @@ mysqli_stmt_bind_param($stmt, 'ssssss', $name, $email, $phone, $service, $slot, 
 $dbOk = mysqli_stmt_execute($stmt);
 
 // Send email notification to admin
-$to = SITE_EMAIL;
+$to = defined('ADMIN_NOTIFICATION_EMAIL') ? ADMIN_NOTIFICATION_EMAIL : (defined('ADMIN_EMAIL') ? ADMIN_EMAIL : SITE_EMAIL);
 $subject = "🔔 New Appointment Booking — " . $name;
 $body = "You have received a new appointment booking on carecwc.com\n\n";
 $body .= "----------------------------------------\n";
@@ -82,11 +82,11 @@ $body .= "Reply to client: tel:" . $phone . "\n";
 $body .= "View in admin: " . SITE_URL . "/admin/manage-bookings\n";
 
 $headers  = "From: CARE Website <no-reply@carecwc.com>\r\n";
-$headers .= "Reply-To: " . $to . "\r\n";
+$headers .= "Reply-To: " . (defined('SITE_EMAIL') ? SITE_EMAIL : 'contact@carecwc.com') . "\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 
-@mail($to, $subject, $body, $headers); // fire-and-forget; don't fail submission if mail fails
+@mail($to, $subject, $body, $headers, "-f no-reply@carecwc.com"); // fire-and-forget; don't fail submission if mail fails
 
 if ($dbOk) {
     echo json_encode(['success' => true]);

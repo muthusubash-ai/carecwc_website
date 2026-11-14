@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_type']) && $_POS
         if (mysqli_stmt_execute($stmt)) {
             $contactSuccess = true;
             // Send email notification to admin
-            $to = SITE_EMAIL;
+            $to = defined('ADMIN_NOTIFICATION_EMAIL') ? ADMIN_NOTIFICATION_EMAIL : (defined('ADMIN_EMAIL') ? ADMIN_EMAIL : SITE_EMAIL);
             $subject = "💬 New Contact Message — " . $name;
             $body  = "You have received a new contact message on carecwc.com\n\n";
             $body .= "----------------------------------------\n";
@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_type']) && $_POS
             $headers  = "From: CARE Website <no-reply@carecwc.com>\r\n";
             $headers .= "Reply-To: " . $email . "\r\n";
             $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-            @mail($to, $subject, $body, $headers);
+            @mail($to, $subject, $body, $headers, "-f no-reply@carecwc.com");
         } else {
             $errors[] = "Something went wrong. Please try again or WhatsApp us directly.";
         }
@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_type']) && $_POS
         if (mysqli_stmt_execute($stmt)) {
             $bookingSuccess = true;
             // Send email notification to admin
-            $to = SITE_EMAIL;
+            $to = defined('ADMIN_NOTIFICATION_EMAIL') ? ADMIN_NOTIFICATION_EMAIL : (defined('ADMIN_EMAIL') ? ADMIN_EMAIL : SITE_EMAIL);
             $subject = "🔔 New Appointment Booking — " . $bname;
             $body  = "You have received a new appointment booking on carecwc.com\n\n";
             $body .= "----------------------------------------\n";
@@ -130,7 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_type']) && $_POS
             $headers  = "From: CARE Website <no-reply@carecwc.com>\r\n";
             $headers .= "Reply-To: " . $bemail . "\r\n";
             $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-            @mail($to, $subject, $body, $headers);
+            @mail($to, $subject, $body, $headers, "-f no-reply@carecwc.com");
         } else {
             $errors[] = "Something went wrong with your booking. Please try again or WhatsApp us directly.";
         }

@@ -45,6 +45,7 @@ define('SITE_PHONE', '+91 99658 55184');
 define('SITE_PHONE_LINK', '+919965855184');       // for tel: links, no spaces
 define('SITE_WHATSAPP', '919965855184');          // for wa.me links, country code no +
 define('SITE_EMAIL', 'contact@carecwc.com');
+define('ADMIN_NOTIFICATION_EMAIL', 'care.cwc@gmail.com, contact@carecwc.com'); // All appointment & contact notifications forward here
 define('CAREER_EMAIL', 'hire.care.cwc@gmail.com');
 define('SITE_ADDRESS', 'Plot # 156, Door # 5A, 6th Street, Kamakoti Nagar, Pallikaranai, Chennai - 600100');
 define('SITE_ADDRESS_HTML', 'Plot # 156, Door # 5A,<br>6th Street, Kamakoti Nagar,<br>Pallikaranai, Chennai - 600100');
